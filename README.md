@@ -1,7 +1,9 @@
 # 1. 背景
-
-BloombergGPT是布隆伯格2023年3月30日公开在arXiv的一篇文章——BloombergGPT: A Large Language Model for Finance中涉及到的语言模型，也是金融领域第一个公开发表文章的大语言模型（以下简称“LLM”）。
+: A Large Language Model for Finance中涉及到的语言模型，也是金融领域第一个公开发表文章的大语言模型（以下简称“LLM”）。
 此项目是对此篇论文的技术复现
+BloombergGPT是布隆伯格2023年3月30日公开在arXiv的一篇文章——BloombergGPT
+
+原论文地址:https://arxiv.org/abs/2303.17564
 
 # 2. 要点
 * BloombergGPT是Bloomberg训练出来的金融大语言模型（LLM for Finance）
@@ -30,3 +32,14 @@ BloombergGPT是一个有500亿参数、基于BLOOM模型的LLM，过程中采用
 * 在超过7000亿个token的语料库中的5690亿个token上训练出一个500亿参数的LLM
 * 使用Unigram模型而非常用的基于贪心合并的子词标记器进行tokenize，方便在推理时进行更智能的标记化
 * 借鉴BLOOM的训练大模型方法，同时也将自己自己在训练BloombergGPT中的经验分享
+
+
+#3. 数据集
+
+BloombergGPT是一个有500亿参数、基于BLOOM模型的LLM，过程中采用了一种兼具通用能力和特定领域的方法。
+参照原作者FinPile选项勾构建了一个包含了新闻、档案、网络爬取的新闻稿件、英文财经文档等英文金融文档的金融领域数据集，
+数据集暂不予公开
+
+
+#3. 模型下载
+
